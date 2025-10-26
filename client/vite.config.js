@@ -8,10 +8,8 @@ export default defineConfig({
     react()
   ],
   server: {
-    host: true,
+    host: true,            // Bind to 0.0.0.0 for Render
     port: Number(process.env.PORT) || 5173,
-    allowedHosts: [
-      'auth-8-1w5e.onrender.com', // Add your Render hostname here
-    ],
+    allowedHosts: 'all',   // Allow all hosts (Render deployment safe)
   },
 })
